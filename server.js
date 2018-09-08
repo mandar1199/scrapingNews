@@ -4,7 +4,6 @@ var expressHandlebars = require("express-handlebars");
 var bodyParser = require("body-parser");
 var mongoose = require("mongoose");
 
-
 //PORT 5000
 var PORT = process.env.PORT || 5000;
 
@@ -13,6 +12,9 @@ var app = express();
 
 //express router
 var router = express.Router();
+
+//route files pass router object
+require("./config/routes")(router);
 
 //designate public folder as a static directory
 app.use(express.static(__dirname + "/public"));
