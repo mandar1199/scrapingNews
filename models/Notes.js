@@ -11,6 +11,6 @@ var noteSchema = new Schema({
     noteText: String
 });
 
-var Note = mongoose.model("Note", noteSchema);
+var Notes = mongoose.model("Note", noteSchema);
 
 module.exports = Notes;
